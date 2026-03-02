@@ -2,8 +2,8 @@ import { Calendar, MapPin, Users, Search } from 'lucide-react';
 
 export default function BookingWidget() {
   return (
-    <section id="booking-widget" className="relative z-20 -mt-24 max-w-6xl mx-auto px-6">
-      <div className="bg-white rounded-xl shadow-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-between border border-fern-sand">
+    <section id="booking-widget" className="relative z-20 max-w-6xl mx-auto px-6">
+      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-8 justify-between border border-fern-sand">
         
         {/* Destination */}
         <div className="flex-1 w-full border-b md:border-b-0 md:border-r border-fern-sand pb-4 md:pb-0 md:pr-8">

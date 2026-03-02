@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
+import BookingWidget from './BookingWidget';
 
 export default function Hero() {
   return (
@@ -21,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20 flex flex-col items-center">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,20 +55,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="w-full"
         >
-          <a
-            href="#book"
-            className="px-8 py-4 bg-fern-gold text-white text-sm uppercase tracking-widest hover:bg-fern-gold-hover transition-colors rounded-sm w-full sm:w-auto text-center"
-          >
-            Reserve Your Stay
-          </a>
-          <a
-            href="#destinations"
-            className="px-8 py-4 bg-transparent border border-white/30 text-white text-sm uppercase tracking-widest hover:bg-white/10 transition-colors rounded-sm w-full sm:w-auto text-center"
-          >
-            Explore Destinations
-          </a>
+          <BookingWidget />
         </motion.div>
       </div>
 
@@ -78,7 +68,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 cursor-pointer hover:text-white transition-colors"
         onClick={() => {
-          document.getElementById('booking-widget')?.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('sustainability')?.scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <span className="text-xs uppercase tracking-widest">Scroll to Discover</span>

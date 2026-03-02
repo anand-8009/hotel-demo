@@ -14,7 +14,7 @@ export default function Hero() {
           poster="https://www.fernhotels.com/_next/image?url=https%3A%2F%2Fwww.fernhotels.com%2Fapi%2Fuploads%2Fimages%2F510---07.png&w=3840&q=75"
           className="w-full h-full object-cover object-center scale-105"
         >
-          <source src="https://drive.google.com/file/d/1C9UAEkkDQyHcZ3x7x7qyHs_1KqXjqRUU/view?usp=sharing" type="video/mp4" />
+          <source src="https://drive.google.com/uc?export=download&id=1C9UAEkkDQyHcZ3x7x7qyHs_1KqXjqRUU" type="video/mp4" />
         </video>
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-fern-navy/60 via-fern-navy/30 to-fern-navy/80" />

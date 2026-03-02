@@ -22,16 +22,33 @@ export default function BookingWidget() {
           </div>
         </div>
 
-        {/* Check In / Out */}
+        {/* Check In */}
         <div className="flex-1 w-full border-b md:border-b-0 md:border-r border-fern-sand pb-4 md:pb-0 md:pr-8">
           <label className="text-xs uppercase tracking-widest text-fern-charcoal/60 font-semibold mb-2 block">
-            Check In - Check Out
+            Check In
           </label>
           <div className="flex items-center gap-3 text-fern-navy">
             <Calendar size={20} className="text-fern-gold" />
             <input 
               type="text" 
-              placeholder="Select Dates" 
+              placeholder="Add Date" 
+              className="w-full bg-transparent text-lg font-serif outline-none cursor-pointer"
+              onFocus={(e) => e.target.type = 'date'}
+              onBlur={(e) => e.target.type = 'text'}
+            />
+          </div>
+        </div>
+
+        {/* Check Out */}
+        <div className="flex-1 w-full border-b md:border-b-0 md:border-r border-fern-sand pb-4 md:pb-0 md:pr-8">
+          <label className="text-xs uppercase tracking-widest text-fern-charcoal/60 font-semibold mb-2 block">
+            Check Out
+          </label>
+          <div className="flex items-center gap-3 text-fern-navy">
+            <Calendar size={20} className="text-fern-gold" />
+            <input 
+              type="text" 
+              placeholder="Add Date" 
               className="w-full bg-transparent text-lg font-serif outline-none cursor-pointer"
               onFocus={(e) => e.target.type = 'date'}
               onBlur={(e) => e.target.type = 'text'}
@@ -42,14 +59,15 @@ export default function BookingWidget() {
         {/* Guests */}
         <div className="flex-1 w-full pb-4 md:pb-0">
           <label className="text-xs uppercase tracking-widest text-fern-charcoal/60 font-semibold mb-2 block">
-            Guests & Rooms
+            Guests
           </label>
           <div className="flex items-center gap-3 text-fern-navy">
             <Users size={20} className="text-fern-gold" />
             <select className="w-full bg-transparent text-lg font-serif outline-none cursor-pointer appearance-none">
-              <option>1 Room, 2 Adults</option>
-              <option>1 Room, 1 Adult</option>
-              <option>2 Rooms, 4 Adults</option>
+              <option>2 Adults, 0 Children</option>
+              <option>1 Adult, 0 Children</option>
+              <option>2 Adults, 1 Child</option>
+              <option>2 Adults, 2 Children</option>
               <option>More Options...</option>
             </select>
           </div>

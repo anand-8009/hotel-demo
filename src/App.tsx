@@ -6,6 +6,7 @@ import Rooms from './components/Rooms';
 import Experiences from './components/Experiences';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
+import Location from './components/Location';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -26,6 +27,7 @@ export default function App() {
         <Experiences />
         <Gallery />
         <Testimonials />
+        <Location />
       </main>
       <Footer />
       <BookingModal isOpen={isBookingModalOpen} onClose={closeBookingModal} />

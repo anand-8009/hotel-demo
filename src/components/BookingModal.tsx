@@ -39,9 +39,33 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the form submission (e.g., API call)
-    console.log('Booking submitted:', formData);
-    alert('Thank you for your booking request! We will contact you shortly.');
+    
+    // Format the message for WhatsApp
+    const message = `*New Booking Request*
+    
+*Guest Details:*
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+*Stay Details:*
+Destination: ${formData.destination || 'Not Selected'}
+Check-in: ${formData.checkIn}
+Check-out: ${formData.checkOut}
+Guests: ${formData.guests}
+Room Type: ${formData.roomType}
+
+*Special Requests:*
+${formData.specialRequests || 'None'}`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = '918009076919';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
     onClose();
   };
 

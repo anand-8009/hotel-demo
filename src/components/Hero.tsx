@@ -2,11 +2,15 @@ import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import BookingWidget from './BookingWidget';
 
-export default function Hero() {
+interface HeroProps {
+  onBookNow: () => void;
+}
+
+export default function Hero({ onBookNow }: HeroProps) {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen w-full flex items-center justify-center">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
           muted
@@ -22,12 +26,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto mt-20 flex flex-col items-center">
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto pt-32 pb-20 md:pt-40 flex flex-col items-center">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="block text-fern-gold text-sm md:text-base uppercase tracking-[0.3em] font-medium mb-6"
+          className="block text-white/90 text-sm md:text-base uppercase tracking-[0.3em] font-medium mb-6"
         >
           India's Leading Environmentally Sensitive Hotels
         </motion.span>
@@ -57,7 +61,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="w-full"
         >
-          <BookingWidget />
+          <BookingWidget onBookNow={onBookNow} />
         </motion.div>
       </div>
 

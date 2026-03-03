@@ -4,22 +4,22 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop",
+    src: "https://www.fernhotels.com/_next/image?url=https%3A%2F%2Fwww.fernhotels.com%2Fapi%2Fuploads%2Fimages%2FDJI_0090.png&w=1200&q=75",
     alt: "Luxury Hotel Exterior",
     category: "Exterior"
   },
   {
-    src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop",
+    src: "https://www.fernhotels.com/_next/image?url=https%3A%2F%2Fwww.fernhotels.com%2Fapi%2Fuploads%2Fimages%2FDSC01428.png&w=1200&q=75",
     alt: "Premium Suite Interior",
     category: "Rooms"
   },
   {
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop",
+    src: "https://www.fernhotels.com/_next/image?url=https%3A%2F%2Fwww.fernhotels.com%2Fapi%2Fuploads%2Fimages%2F2BB68260-5780-4056-9336-068A735A6D64.png&w=1200&q=75",
     alt: "Wellness Spa",
     category: "Wellness"
   },
   {
-    src: "https://images.unsplash.com/photo-1571896349842-6e53ce41e887?q=80&w=2070&auto=format&fit=crop",
+    src: "https://www.fernhotels.com/_next/image?url=https%3A%2F%2Fwww.fernhotels.com%2Fapi%2Fuploads%2Fimages%2FCeleste-5.png&w=1200&q=75",
     alt: "Infinity Pool",
     category: "Amenities"
   },
